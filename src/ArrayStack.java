@@ -17,12 +17,14 @@ class Test1{
     }
     public void sum(){
         ArrayStack Ar=new ArrayStack(arr.length);
+        StackByLinkedList lb= new StackByLinkedList();
         for (int i = 0; i < arr.length ; i++) {
             int s=0;
             for (int j = 0; j < arr[i].length; j++) {
                 s=s+arr[j][i];
             }
             Ar.push(s);
+            lb.push(s);
         }
     }
 }
@@ -65,9 +67,11 @@ public class ArrayStack {
 class Show{
     public static void main(String[] args) {
         Test1 t= new Test1();
+        StackByLinkedList s= new StackByLinkedList();
         t.sum();
         //ArrayStack.pop();
-        ArrayStack.dis();
+        //ArrayStack.dis();
+        s.display();
     }
 }
 
